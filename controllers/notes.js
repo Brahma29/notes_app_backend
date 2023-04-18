@@ -61,7 +61,7 @@ const deleteNote = async (req, res) => {
   const { id } = req.params;
   try {
     const deleteMsg = await deleteUserNote(id);
-    if (note.message === 'Note not found') {
+    if (deleteMsg.message === 'Note not found') {
       return res.status(404).json(note);
     }
     res.status(200).json(deleteMsg);
