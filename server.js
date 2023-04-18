@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 
 // Routes
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('API running...');
 });
 
