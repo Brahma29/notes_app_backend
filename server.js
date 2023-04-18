@@ -18,10 +18,6 @@ app.use(morgan('dev'));
 
 // Routes
 
-app.get('/', (req, res) => {
-  res.send('API running...');
-});
-
 app.use('/api/notes', notesRouter);
 app.use('/api/auth', authRouter);
 
