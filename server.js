@@ -17,6 +17,11 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 // Routes
+
+app.use('/', (req, res) => {
+  res.send('API running...');
+});
+
 app.use('/api/notes', notesRouter);
 app.use('/api/auth', authRouter);
 
